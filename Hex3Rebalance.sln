@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.unity.multiplayer-hlapi.Runtime", "com.unity.multiplayer-hlapi.Runtime.csproj", "{64B94B60-0274-3C0B-016F-F90C65A28305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hex3Rebalance", "Hex3Rebalance.csproj", "{815A5D58-D57A-BE8E-E11F-6829ABB42091}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoR2EditorKit", "RoR2EditorKit.csproj", "{160B6175-F3BE-9FCB-EE9A-0015AB3BE8AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.unity.multiplayer-hlapi.Editor", "com.unity.multiplayer-hlapi.Editor.csproj", "{830FF913-7505-156B-3751-8F8EC74F2692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoR2EditorScripts", "RoR2EditorScripts.csproj", "{1B81C34E-19F7-17E7-1478-38EF907D65A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.unity.multiplayer-weaver.Editor", "com.unity.multiplayer-weaver.Editor.csproj", "{8726F5C9-9375-FB26-CE05-9E39CA279A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoDetector", "MonoDetector.csproj", "{6E67BE2B-E02C-FBF8-4BC7-54B8FA40129F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64B94B60-0274-3C0B-016F-F90C65A28305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B94B60-0274-3C0B-016F-F90C65A28305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B94B60-0274-3C0B-016F-F90C65A28305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B94B60-0274-3C0B-016F-F90C65A28305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{815A5D58-D57A-BE8E-E11F-6829ABB42091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{815A5D58-D57A-BE8E-E11F-6829ABB42091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{815A5D58-D57A-BE8E-E11F-6829ABB42091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{815A5D58-D57A-BE8E-E11F-6829ABB42091}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160B6175-F3BE-9FCB-EE9A-0015AB3BE8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160B6175-F3BE-9FCB-EE9A-0015AB3BE8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160B6175-F3BE-9FCB-EE9A-0015AB3BE8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160B6175-F3BE-9FCB-EE9A-0015AB3BE8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{830FF913-7505-156B-3751-8F8EC74F2692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{830FF913-7505-156B-3751-8F8EC74F2692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{830FF913-7505-156B-3751-8F8EC74F2692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{830FF913-7505-156B-3751-8F8EC74F2692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B81C34E-19F7-17E7-1478-38EF907D65A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B81C34E-19F7-17E7-1478-38EF907D65A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B81C34E-19F7-17E7-1478-38EF907D65A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B81C34E-19F7-17E7-1478-38EF907D65A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8726F5C9-9375-FB26-CE05-9E39CA279A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8726F5C9-9375-FB26-CE05-9E39CA279A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8726F5C9-9375-FB26-CE05-9E39CA279A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8726F5C9-9375-FB26-CE05-9E39CA279A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E67BE2B-E02C-FBF8-4BC7-54B8FA40129F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E67BE2B-E02C-FBF8-4BC7-54B8FA40129F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E67BE2B-E02C-FBF8-4BC7-54B8FA40129F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E67BE2B-E02C-FBF8-4BC7-54B8FA40129F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

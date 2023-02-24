@@ -1,0 +1,85 @@
+ManifestFileVersion: 0
+CRC: 1036708845
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fb5918d132868c94414658106a927301
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 280d6f9445cb32f4d1b7d861e4e14731
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 111
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 488236779, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 870831823, guid: c8c954e10545f6cd0045de066bc4846b, type: 3}
+- Class: 114
+  Script: {fileID: 1788389205, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 296141222, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AssetBundle/Shaders/fx/hgdamagenumber.shader
+- Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionRamp.png
+- Assets/AssetBundle/Shaders/postprocess/hgoutlinehighlight.shader
+- Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionMaterial.mat
+- Assets/AssetBundle/Shaders/deferred/hgstandard.shader
+- Assets/AssetBundle/H3RContentPack.asset
+- Assets/AssetBundle/Shaders/deferred/hgwavycloth.shader
+- Assets/AssetBundle/Shaders/ui/hguicustomblend.shader
+- Assets/AssetBundle/Shaders/postprocess/hgscopeshader.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionTexture.png
+- Assets/AssetBundle/Shaders/fx/hgcloudremap.shader
+- Assets/AssetBundle/Shaders/deferred/hgtriplanarterrainblend.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionPrefab.prefab
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionTexture2.png
+- Assets/AssetBundle/Shaders/environment/hgwaterfall.shader
+- Assets/AssetBundle/Shaders/fx/hgintersectioncloudremap.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionMaterial.mat
+- Assets/AssetBundle/Shaders/environment/hgdistantwater.shader
+- Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionPrefab.prefab
+- Assets/AssetBundle/Shaders/ui/hguioverbrighten.shader
+- Assets/AssetBundle/Shaders/postprocess/hgscreendamage.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionBase.png
+- Assets/AssetBundle/Shaders/fx/hgopaquecloudremap.shader
+- Assets/AssetBundle/Shaders/fx/hgforwardplanet.shader
+- Assets/AssetBundle/Shaders/fx/hgvertexonly.shader
+- Assets/AssetBundle/Shaders/ui/hguiignorez.shader
+- Assets/AssetBundle/Shaders/Hopoo_GamesFXCloud_Remap.shader
+- Assets/AssetBundle/Prefabs/Corpsebloom/CorpseMaterialAnim2.anim
+- Assets/AssetBundle/Shaders/fx/hgdistortion.shader
+- Assets/AssetBundle/Shaders/ui/hguiblur.shader
+- Assets/AssetBundle/Shaders/environment/hggrass.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionRamp.png
+- Assets/AssetBundle/Shaders/ui/hguibarremap.shader
+- Assets/AssetBundle/Shaders/fx/hgsolidparallax.shader
+- Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionFade.anim
+- Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionTexture.png
+- Assets/AssetBundle/Shaders/ui/hguianimatealpha.shader
+- Assets/AssetBundle/Shaders/postprocess/hgsobelbuffer.shader
+- Assets/AssetBundle/Shaders/deferred/hgsnowtopped.shader
+Dependencies: []
