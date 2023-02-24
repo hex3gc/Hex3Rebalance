@@ -1,6 +1,6 @@
 # Hex3Rebalance
 
-A rebalance mod that changes some of the vanilla systems of the game.
+A work-in-progress balancing mod that changes some of the vanilla systems of the game.
 
 <a href="https://docs.google.com/document/d/1LYXD3NK8ujFzKgfpnBfxXZfSdS0FrEV_qzumdOeqln0/edit?usp=sharing">Detailed notes on the changes can be found on the Hex3Rebalance google doc.</a>
 
