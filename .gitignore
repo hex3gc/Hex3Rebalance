@@ -397,3 +397,5 @@ MonoDetector.csproj
 NewAssembly.csproj
 obj/
 Packages/
+Thunderkit/
+ProjectSettings/
