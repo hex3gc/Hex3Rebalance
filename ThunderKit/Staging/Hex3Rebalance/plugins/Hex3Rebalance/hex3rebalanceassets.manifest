@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1036708845
+CRC: 3520832294
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: fb5918d132868c94414658106a927301
+    Hash: 8f899dea044e5fed7ef867ba22506b50
   TypeTreeHash:
     serializedVersion: 2
     Hash: 280d6f9445cb32f4d1b7d861e4e14731
@@ -69,7 +69,6 @@ Assets:
 - Assets/AssetBundle/Shaders/fx/hgforwardplanet.shader
 - Assets/AssetBundle/Shaders/fx/hgvertexonly.shader
 - Assets/AssetBundle/Shaders/ui/hguiignorez.shader
-- Assets/AssetBundle/Shaders/Hopoo_GamesFXCloud_Remap.shader
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseMaterialAnim2.anim
 - Assets/AssetBundle/Shaders/fx/hgdistortion.shader
 - Assets/AssetBundle/Shaders/ui/hguiblur.shader

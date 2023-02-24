@@ -7,13 +7,13 @@ namespace Hex3Rebalance.Modules
     public static class FirstHit
     {
         // Used with first-hit items to track who has hit a victim
-        private static bool InflictFirstHit(CharacterBody attacker, CharacterBody victim)
+        public static bool InflictFirstHit(GameObject attacker, GameObject victim)
         {
-            if (!victim.gameObject.GetComponent<FirstHitTracker>())
+            if (!victim.GetComponent<FirstHitTracker>())
             {
-                victim.gameObject.AddComponent<FirstHitTracker>();
+                victim.AddComponent<FirstHitTracker>();
             }
-            FirstHitTracker tracker = victim.gameObject.GetComponent<FirstHitTracker>();
+            FirstHitTracker tracker = victim.GetComponent<FirstHitTracker>();
 
             if (!tracker.attackerList.Contains(attacker.GetInstanceID()))
             {

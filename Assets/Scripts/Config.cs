@@ -53,6 +53,8 @@ namespace Hex3Rebalance.Init
 
         // Void Common
         public static ConfigEntry<bool> NeedleTick_Enable;
+        public static ConfigEntry<float> NeedleTick_Damage;
+        public static ConfigEntry<float> NeedleTick_DamageStack;
 
         public static void Init()
         {
@@ -105,6 +107,8 @@ namespace Hex3Rebalance.Init
 
             // Void Common
             NeedleTick_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
+            NeedleTick_Damage = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage"), 80f, new ConfigDescription("Percent total damage dealt by Collapse"));
+            NeedleTick_DamageStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage per stack"), 40f, new ConfigDescription("Percent total damage dealt by Collapse per additional stack"));
         }
     }
 }

@@ -19,6 +19,8 @@ A work-in-progress balancing mod that changes some of the vanilla systems of the
 | ![focusedConvergenceImg] | **Focused Convergence**<br>Teleporters and holdout zones charge **<ins>30</ins>%** <sup>(+<ins>30</ins>% per stack)</sup> faster, **but their radius shrinks over time**. Standing outside of holdout radius **diminishes charge** by **<ins>5</ins>%** per second <sup>(+<ins>2.5</ins>% per stack)</sup>. |
 | ![lightFluxImg] | **Light Flux Pauldron**<br>Gain **<ins>30</ins>%** <sup>(+<ins>30</ins>% per stack)</sup> movement speed and reduce utility skill cooldown by **<ins>50</ins>%** (-<ins>50</ins>% per stack). **Your maximum health is reduced by 50%** <sup>(-50% per stack)</sup>. |
 | ![stoneFluxImg] | **Stone Flux Pauldron**<br>Increase your **maximum health** by **<ins>100</ins>%** <sup>(+<ins>100</ins>% per stack)</sup> and **enhance regeneration** by **<ins>8</ins> hp/s** <sup>(+<ins>4</ins> per stack)</sup>. **All of your healing is reduced by <ins>50</ins>%** <sup>(-<ins>50</ins>% per stack)</sup>. |
+|  | **VOID** |  |
+| ![needleTickImg] | **Needletick**<br>Your first hit on an enemy inflicts **Collapse**, which deals **<ins>80%</ins>** <sup>(+<ins>40</ins>% per stack)</sup> TOTAL damage after a short delay. **Corrupts all Tri-Tip Daggers.** |
 
 [bungusImg]:
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/3/33/Bustling_Fungus.png
@@ -34,6 +36,8 @@ https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/2/2c/Focused_C
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/6/6e/Light_Flux_Pauldron.png
 [stoneFluxImg]:
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/b/b1/Stone_Flux_Pauldron.png
+[needleTickImg]:
+https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/7/76/Needletick.png
 
 # Bugs
 

@@ -16,6 +16,8 @@ namespace Hex3Rebalance.Init
             LightFluxPauldron.Init("Light Flux Pauldron", "Lunar");
             StoneFluxPauldron.Init("Stone Flux Pauldron", "Lunar");
             FocusedConvergence.Init("Focused Convergence", "Lunar");
+            // Void Common
+            NeedleTick.Init("NeedleTick", "Void Common");
         }
     }
 }
