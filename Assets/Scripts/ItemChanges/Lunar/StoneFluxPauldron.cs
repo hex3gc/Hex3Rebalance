@@ -4,6 +4,7 @@ using UnityEngine;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
@@ -15,18 +16,12 @@ namespace Hex3Rebalance.ItemChanges
         private static float RegenAddStack;
         private static float HealingReduce;
         private static float HealingReduceStack;
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
-            if (Configs.StoneFluxPauldron_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.StoneFluxPauldron_Enable.Value, "Lunar", "Stone Flux Pauldron"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
-
             HealthIncrease = Configs.StoneFluxPauldron_HealthIncrease.Value / 100f;
             HealthIncreaseStack = Configs.StoneFluxPauldron_HealthIncreaseStack.Value / 100f;
             RegenAdd = Configs.StoneFluxPauldron_RegenAdd.Value;

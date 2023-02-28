@@ -1,0 +1,263 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f9af1c6015733a42be940cc462aa7ed, type: 3}
+  m_Name: Log 160
+  m_EditorClassIdentifier: 
+  pipeline: {fileID: 11400000, guid: 94fe6bb1731959949af4d6007dad31f3, type: 2}
+  creationDate:
+    ticks: 638128474620797898
+  entries:
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474683924799
+    message: '[Pipeline](assetlink://Assets%2fPipeline.asset) Finished execution'
+    context: []
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474669319560
+    message: '[Pipeline(1 - StageAssetBundles)](assetlink://Assets%2fPipeline.asset)[Hex3Rebalance](assetlink://Assets%2fHex3Rebalance.asset)
+      Creating 1 AssetBundles'
+    context:
+    - 'hex3rebalanceassets
+
+      [H3RContentPack](assetlink://Assets%2fAssetBundle%2fH3RContentPack.asset)
+
+      
+
+      [CorpseExplosionMaterial](assetlink://Assets%2fAssetBundle%2fPrefabs%2fCorpsebloom%2fCorpseExplosionMaterial.mat)
+
+      
+
+      [CorpseExplosionPrefab](assetlink://Assets%2fAssetBundle%2fPrefabs%2fCorpsebloom%2fCorpseExplosionPrefab.prefab)
+
+      
+
+      [CorpseExplosionRamp](assetlink://Assets%2fAssetBundle%2fPrefabs%2fCorpsebloom%2fCorpseExplosionRamp.png)
+
+      
+
+      [CorpseExplosionTexture](assetlink://Assets%2fAssetBundle%2fPrefabs%2fCorpsebloom%2fCorpseExplosionTexture.png)
+
+      
+
+      [CorpseMaterialAnim2](assetlink://Assets%2fAssetBundle%2fPrefabs%2fCorpsebloom%2fCorpseMaterialAnim2.anim)
+
+      
+
+      [StunExplosionBase](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionBase.png)
+
+      
+
+      [StunExplosionFade](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionFade.anim)
+
+      
+
+      [StunExplosionMaterial](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionMaterial.mat)
+
+      
+
+      [StunExplosionPrefab](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionPrefab.prefab)
+
+      
+
+      [StunExplosionRamp](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionRamp.png)
+
+      
+
+      [StunExplosionTexture](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionTexture.png)
+
+      
+
+      [StunExplosionTexture2](assetlink://Assets%2fAssetBundle%2fPrefabs%2fStunGrenade%2fStunExplosionTexture2.png)
+
+      
+
+      [hgsnowtopped](assetlink://Assets%2fAssetBundle%2fShaders%2fdeferred%2fhgsnowtopped.shader)
+
+      
+
+      [hgstandard](assetlink://Assets%2fAssetBundle%2fShaders%2fdeferred%2fhgstandard.shader)
+
+      
+
+      [hgtriplanarterrainblend](assetlink://Assets%2fAssetBundle%2fShaders%2fdeferred%2fhgtriplanarterrainblend.shader)
+
+      
+
+      [hgwavycloth](assetlink://Assets%2fAssetBundle%2fShaders%2fdeferred%2fhgwavycloth.shader)
+
+      
+
+      [hgdistantwater](assetlink://Assets%2fAssetBundle%2fShaders%2fenvironment%2fhgdistantwater.shader)
+
+      
+
+      [hggrass](assetlink://Assets%2fAssetBundle%2fShaders%2fenvironment%2fhggrass.shader)
+
+      
+
+      [hgwaterfall](assetlink://Assets%2fAssetBundle%2fShaders%2fenvironment%2fhgwaterfall.shader)
+
+      
+
+      [hgcloudremap](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgcloudremap.shader)
+
+      
+
+      [hgdamagenumber](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgdamagenumber.shader)
+
+      
+
+      [hgdistortion](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgdistortion.shader)
+
+      
+
+      [hgforwardplanet](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgforwardplanet.shader)
+
+      
+
+      [hgintersectioncloudremap](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgintersectioncloudremap.shader)
+
+      
+
+      [hgopaquecloudremap](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgopaquecloudremap.shader)
+
+      
+
+      [hgsolidparallax](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgsolidparallax.shader)
+
+      
+
+      [hgvertexonly](assetlink://Assets%2fAssetBundle%2fShaders%2ffx%2fhgvertexonly.shader)
+
+      
+
+      [hgoutlinehighlight](assetlink://Assets%2fAssetBundle%2fShaders%2fpostprocess%2fhgoutlinehighlight.shader)
+
+      
+
+      [hgscopeshader](assetlink://Assets%2fAssetBundle%2fShaders%2fpostprocess%2fhgscopeshader.shader)
+
+      
+
+      [hgscreendamage](assetlink://Assets%2fAssetBundle%2fShaders%2fpostprocess%2fhgscreendamage.shader)
+
+      
+
+      [hgsobelbuffer](assetlink://Assets%2fAssetBundle%2fShaders%2fpostprocess%2fhgsobelbuffer.shader)
+
+      
+
+      [hguianimatealpha](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguianimatealpha.shader)
+
+      
+
+      [hguibarremap](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguibarremap.shader)
+
+      
+
+      [hguiblur](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguiblur.shader)
+
+      
+
+      [hguicustomblend](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguicustomblend.shader)
+
+      
+
+      [hguiignorez](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguiignorez.shader)
+
+      
+
+      [hguioverbrighten](assetlink://Assets%2fAssetBundle%2fShaders%2fui%2fhguioverbrighten.shader)
+
+      
+
+      
+
+'
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474649857690
+    message: '[Pipeline(1 - StageAssetBundles)](assetlink://Assets%2fPipeline.asset)
+      Execute Job'
+    context: []
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474644884851
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[Hex3Rebalance](assetlink://Assets%2fHex3Rebalance.asset)
+      staging ``` C:/Users/des__/AppData/Roaming/r2modmanPlus-local/RiskOfRain2/profiles/Testing
+      Grounds/BepInEx/plugins/hex3-Hex3Rebalance ``` in ``` ThunderKit/Staging/Hex3Rebalance/plugins/Hex3Rebalance
+      ```
+
+'
+    context:
+    - "Assembly Files\r\nFrom: C:/Users/des__/AppData/Roaming/r2modmanPlus-local/RiskOfRain2/profiles/Testing
+      Grounds/BepInEx/plugins/hex3-Hex3Rebalance\\Hex3Rebalance.dll\r\n  To: ThunderKit/Staging/Hex3Rebalance/plugins/Hex3Rebalance/Hex3Rebalance.dll\r\n\r\n"
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474644246545
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[Hex3Rebalance](assetlink://Assets%2fHex3Rebalance.asset)
+      Build Completed: ``` C:/Users/des__/AppData/Roaming/r2modmanPlus-local/RiskOfRain2/profiles/Testing
+      Grounds/BepInEx/plugins/hex3-Hex3Rebalance/Hex3Rebalance.dll ```'
+    context: []
+  - logLevel: 1
+    internalTime:
+      ticks: 638128474643816238
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[Hex3Rebalance](assetlink://Assets%2fHex3Rebalance.asset)
+      Assets\Scripts\Hex3RebalancePlugin.cs(11,31): warning CS0618: ''SecurityAction.RequestMinimum''
+      is obsolete: ''Assembly level declarative security is obsolete and is no longer
+      enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570
+      for more information.'''
+    context:
+    - Assets\Scripts\Hex3RebalancePlugin.cs (11:31)
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474634091198
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[Hex3Rebalance](assetlink://Assets%2fHex3Rebalance.asset)
+      Building : C:/Users/des__/AppData/Roaming/r2modmanPlus-local/RiskOfRain2/profiles/Testing
+      Grounds/BepInEx/plugins/hex3-Hex3Rebalance/Hex3Rebalance.dll'
+    context: []
+  - logLevel: 1
+    internalTime:
+      ticks: 638128474631589675
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[R2API](assetlink://Packages%2ftristanmcpherson-r2api%2fR2API.asset)
+      No AssemblyDefinitions found, skipping'
+    context: []
+  - logLevel: 1
+    internalTime:
+      ticks: 638128474630198507
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[HookGenPatcher](assetlink://Packages%2friskofthunder-hookgenpatcher%2fHookGenPatcher.asset)
+      No AssemblyDefinitions found, skipping'
+    context: []
+  - logLevel: 1
+    internalTime:
+      ticks: 638128474629287566
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)[BepInExPack](assetlink://Packages%2fbbepis-bepinexpack%2fBepInExPack.asset)
+      No AssemblyDefinitions found, skipping'
+    context: []
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474624054268
+    message: '[Pipeline(0 - StageAssemblies)](assetlink://Assets%2fPipeline.asset)
+      Execute Job'
+    context: []
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474623934160
+    message: '[Pipeline](assetlink://Assets%2fPipeline.asset) Clearing PipelineJob
+      error states'
+    context: []
+  - logLevel: 0
+    internalTime:
+      ticks: 638128474623704043
+    message: '[Pipeline](assetlink://Assets%2fPipeline.asset) Execute Pipeline'
+    context: []

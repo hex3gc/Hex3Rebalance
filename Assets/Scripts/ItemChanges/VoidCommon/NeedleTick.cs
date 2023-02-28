@@ -5,6 +5,7 @@ using UnityEngine;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
 using Hex3Rebalance.Modules;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
@@ -12,15 +13,10 @@ namespace Hex3Rebalance.ItemChanges
     {
         private static float Damage;
         private static float DamageStack;
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
-            if (Configs.NeedleTick_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.FocusedConvergence_Enable.Value, "Void Common", "NeedleTick"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             Damage = Configs.NeedleTick_Damage.Value / 100f;
@@ -42,12 +38,18 @@ namespace Hex3Rebalance.ItemChanges
             IL.RoR2.GlobalEventManager.OnHitEnemy += (il) =>
             {
                 ILCursor ilcursor = new ILCursor(il);
-                ilcursor.GotoNext(
+                if (ilcursor.TryGotoNext(
                     x => x.MatchLdarg(1),
                     x => x.MatchLdfld<DamageInfo>("procChainMask"),
                     x => x.MatchStloc(25)
-                );
-                ilcursor.RemoveRange(18);
+                ))
+                {
+                    ilcursor.RemoveRange(18);
+                }
+                else
+                {
+                    Debug.LogError(Main.ModName + " Needletick RoR2.GlobalEventManager.OnHitEnemy hook failed.");
+                }
             };
 
             // Add collapse on first hit
@@ -60,7 +62,7 @@ namespace Hex3Rebalance.ItemChanges
                     CharacterBody attackerBody = damageInfo.attacker.GetComponent<CharacterBody>();
                     if (victimBody.healthComponent && attackerBody.inventory && attackerBody.inventory.GetItemCount(DLC1Content.Items.BleedOnHitVoid) > 0)
                     {
-                        victimBody.healthComponent.ApplyDot(damageInfo.attacker, DotController.DotIndex.Fracture, 3f, ((1f / 4f) * Damage + (DamageStack * (attackerBody.inventory.GetItemCount(DLC1Content.Items.BleedOnHitVoid) - 1))) * (damageInfo.damage / attackerBody.baseDamage));
+                        victimBody.healthComponent.ApplyDot(damageInfo.attacker, DotController.DotIndex.Fracture, 3f, 0.25f *  ((Damage + (DamageStack * (attackerBody.inventory.GetItemCount(DLC1Content.Items.BleedOnHitVoid) - 1))) * (damageInfo.damage / attackerBody.baseDamage)));
                     }
                 }
             }

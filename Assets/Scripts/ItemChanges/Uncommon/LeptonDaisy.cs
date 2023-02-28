@@ -3,21 +3,17 @@ using R2API;
 using UnityEngine;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
     public static class LeptonDaisy
     {
         private static float WeakDuration;
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
-            if (Configs.LeptonDaisy_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.LeptonDaisy_Enable.Value, "Uncommon", "Lepton Daisy"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             WeakDuration = Configs.LeptonDaisy_WeakDuration.Value;
@@ -65,7 +61,7 @@ namespace Hex3Rebalance.ItemChanges
                 }
                 else
                 {
-                    Debug.LogError(Main.ModName + "Lepton Daisy TeleporterHealNovaPulse.HealPulse.Update hook failed.");
+                    Debug.LogError(Main.ModName + " Lepton Daisy TeleporterHealNovaPulse.HealPulse.Update hook failed.");
                 }
             };
 

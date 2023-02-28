@@ -5,6 +5,7 @@ using UnityEngine;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
@@ -17,18 +18,12 @@ namespace Hex3Rebalance.ItemChanges
         private static float BackslideIncrease;
         private static float BackslideIncreaseStack;
         private static float ShrinkFactor;
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
-            if (Configs.FocusedConvergence_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.FocusedConvergence_Enable.Value, "Lunar", "Focused Convergence"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
-
             RadiusIncrease = Configs.FocusedConvergence_RadiusIncrease.Value / 100f;
             RadiusIncreaseStack = Configs.FocusedConvergence_RadiusIncreaseStack.Value / 100f;
             SpeedIncrease = Configs.FocusedConvergence_SpeedIncrease.Value / 100f;

@@ -15,19 +15,14 @@ namespace Hex3Rebalance.ItemChanges
         private static float ExplosionRadiusStack;
         private static float ExplosionDamage;
         private static GameObject stunExplosionPrefab = Assets.mainAssetBundle.LoadAsset<GameObject>("Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionPrefab.prefab");
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
             if (Main.debugMode)
             {
                 stunExplosionPrefab.GetComponentInChildren<Renderer>().gameObject.AddComponent<MaterialControllerComponents.HGControllerFinder>();
             }
-            if (Configs.StunGrenade_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.StunGrenade_Enable.Value, "Common", "Stun Grenade"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             ExplosionChance = Configs.StunGrenade_ExplosionChance.Value;

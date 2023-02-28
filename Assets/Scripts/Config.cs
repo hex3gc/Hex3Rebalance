@@ -17,10 +17,18 @@ namespace Hex3Rebalance.Init
         public static ConfigEntry<float> BustlingFungus_HealFraction;
         public static ConfigEntry<float> BustlingFungus_HealFractionStack;
         public static ConfigEntry<float> BustlingFungus_Interval;
+        public static ConfigEntry<bool> BustlingFungus_WindDown;
 
         // Uncommon
         public static ConfigEntry<bool> LeptonDaisy_Enable;
         public static ConfigEntry<float> LeptonDaisy_WeakDuration;
+
+        public static ConfigEntry<bool> HuntersHarpoon_Enable;
+        public static ConfigEntry<float> HuntersHarpoon_SpeedPerKill;
+        public static ConfigEntry<int> HuntersHarpoon_SpeedCap;
+        public static ConfigEntry<int> HuntersHarpoon_SpeedCapStack;
+        public static ConfigEntry<int> HuntersHarpoon_MountainShrineStack;
+        public static ConfigEntry<int> HuntersHarpoon_MountainShrineAdditionalStack;
 
         // Lunar
         public static ConfigEntry<bool> Corpsebloom_Enable;
@@ -56,6 +64,10 @@ namespace Hex3Rebalance.Init
         public static ConfigEntry<float> NeedleTick_Damage;
         public static ConfigEntry<float> NeedleTick_DamageStack;
 
+        // Gameplay
+        public static ConfigEntry<bool> VoidCradles;
+        public static ConfigEntry<float> VoidCradles_Duration;
+
         public static void Init()
         {
             // Common
@@ -71,16 +83,24 @@ namespace Hex3Rebalance.Init
             BustlingFungus_HealFraction = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Common) - Bustling Fungus", "Heal fraction"), 2.5f, new ConfigDescription("Mushroom zone healing percent"));
             BustlingFungus_HealFractionStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Common) - Bustling Fungus", "Heal fraction stack"), 2f, new ConfigDescription("Mushroom zone healing percent, per additional stack"));
             BustlingFungus_Interval = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Common) - Bustling Fungus", "Zone drop interval"), 10f, new ConfigDescription("Seconds between mushroom zones being deployed"));
+            BustlingFungus_WindDown = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Common) - Bustling Fungus", "Zone expiry shrink"), true, new ConfigDescription("Toggle shrinking before zone expiry, in case it causes issues at short intervals."));
 
             // Uncommon
             LeptonDaisy_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Uncommon) - Lepton Daisy", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
-            LeptonDaisy_WeakDuration = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Uncommon) - Lepton Daisy", "Weaken duration"), 6f, new ConfigDescription("How long enemies are weakened by the healing nova, in seconds.")); 
+            LeptonDaisy_WeakDuration = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Uncommon) - Lepton Daisy", "Weaken duration"), 6f, new ConfigDescription("How long enemies are weakened by the healing nova, in seconds."));
+
+            HuntersHarpoon_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
+            HuntersHarpoon_SpeedPerKill = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Speed per kill"), 3f, new ConfigDescription("Percent speed boost added per kill"));
+            HuntersHarpoon_SpeedCap = Main.instance.Config.Bind<int>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Speed cap"), 10, new ConfigDescription("Maximum stacks of buff applied"));
+            HuntersHarpoon_SpeedCapStack = Main.instance.Config.Bind<int>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Speed cap stack"), 10, new ConfigDescription("Maximum stacks of buff applied, per additional stack"));
+            HuntersHarpoon_MountainShrineStack = Main.instance.Config.Bind<int>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Mountain shrine addition"), 1, new ConfigDescription("Extra mountain shrine stacks added"));
+            HuntersHarpoon_MountainShrineAdditionalStack = Main.instance.Config.Bind<int>(new ConfigDefinition("Items (Uncommon) - Hunters Harpoon", "Mountain shrine additional stacks"), 1, new ConfigDescription("Extra mountain shrine stacks added, per additional stack"));
 
             // Lunar
             Corpsebloom_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
             Corpsebloom_ExplosionRange = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Poison burst radius"), 20f, new ConfigDescription("Base poison burst radius in meters"));
             Corpsebloom_ExplosionRangeStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Poison burst radius per stack"), 5f, new ConfigDescription("Base poison burst radius in meters, per additional stack"));
-            Corpsebloom_AntiRegenStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Anti-regen multiplier per stack"), 1f, new ConfigDescription("Inverted regen is boosted by this multiplier per additional stack"));
+            Corpsebloom_AntiRegenStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Anti-regen multiplier per stack"), 0.5f, new ConfigDescription("Inverted regen is boosted by this multiplier per additional stack"));
             Corpsebloom_PercentHealthThreshold = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Lunar) - Corpsebloom", "Poison burst anti-regen threshold"), 100f, new ConfigDescription("Percent of the holder's max health required to create a poison burst"));
 
             LightFluxPauldron_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Lunar) - Light Flux Pauldron", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
@@ -107,8 +127,12 @@ namespace Hex3Rebalance.Init
 
             // Void Common
             NeedleTick_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Enable changes"), true, new ConfigDescription("Toggle changes to this item."));
-            NeedleTick_Damage = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage"), 80f, new ConfigDescription("Percent total damage dealt by Collapse"));
-            NeedleTick_DamageStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage per stack"), 40f, new ConfigDescription("Percent total damage dealt by Collapse per additional stack"));
+            NeedleTick_Damage = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage"), 100f, new ConfigDescription("Percent total damage dealt by Collapse"));
+            NeedleTick_DamageStack = Main.instance.Config.Bind<float>(new ConfigDefinition("Items (Void Common) - NeedleTick", "Damage per stack"), 50f, new ConfigDescription("Percent total damage dealt by Collapse per additional stack"));
+
+            // Gameplay
+            VoidCradles = Main.instance.Config.Bind<bool>(new ConfigDefinition("Gameplay - Void Cradles", "Enable changes"), true, new ConfigDescription("Toggle changes to this interactable."));
+            VoidCradles_Duration = Main.instance.Config.Bind<float>(new ConfigDefinition("Gameplay - Void Cradles", "Debuff duration"), 15f, new ConfigDescription("How long void cradle anti-heal and regen lasts in seconds"));
         }
     }
 }

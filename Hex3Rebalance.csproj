@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Assets.cs" />
      <Compile Include="Assets\Scripts\Config.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\VoidCradle.cs" />
      <Compile Include="Assets\Scripts\Hex3RebalancePlugin.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Common\BustlingFungus.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Common\StunGrenade.cs" />
@@ -64,10 +65,12 @@
      <Compile Include="Assets\Scripts\ItemChanges\Lunar\FocusedConvergence.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Lunar\LightFluxPauldron.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Lunar\StoneFluxPauldron.cs" />
+     <Compile Include="Assets\Scripts\ItemChanges\Uncommon\HuntersHarpoon.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Uncommon\LeptonDaisy.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\VoidCommon\NeedleTick.cs" />
-     <Compile Include="Assets\Scripts\Items.cs" />
      <Compile Include="Assets\Scripts\Modules\FirstHit.cs" />
+     <Compile Include="Assets\Scripts\Setup.cs" />
+     <Compile Include="Assets\Scripts\Utils\ItemDebugLog.cs" />
      <Compile Include="Assets\Scripts\Utils\MaterialControllerComponent.cs" />
      <None Include="Assets\AssetBundle\Shaders\postprocess\hgsobelbuffer.shader" />
      <None Include="Assets\AssetBundle\Shaders\ui\hguicustomblend.shader" />

@@ -4,6 +4,7 @@ using UnityEngine;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
@@ -11,15 +12,10 @@ namespace Hex3Rebalance.ItemChanges
     {
         private static float MoveSpeedStack;
         private static float CooldownReductionStack;
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
-            if (Configs.LightFluxPauldron_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.LightFluxPauldron_Enable.Value, "Lunar", "Light Flux Pauldron"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             MoveSpeedStack = Configs.LightFluxPauldron_MoveSpeedStack.Value / 100f;

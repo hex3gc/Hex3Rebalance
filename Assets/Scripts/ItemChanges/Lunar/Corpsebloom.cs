@@ -19,19 +19,14 @@ namespace Hex3Rebalance.ItemChanges
         private static GameObject corpseExplosionPrefab = Assets.mainAssetBundle.LoadAsset<GameObject>("Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionPrefab.prefab");
         private static Material corpseExplosionMaterial = Assets.mainAssetBundle.LoadAsset<Material>("Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionMaterial.mat");
         private static GameObject crocoSplashPrefab = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Croco/CrocoDiseaseImpactEffect.prefab").WaitForCompletion();
-        public static void Init(string itemName, string itemTier)
+        public static void Init()
         {
             if (Main.debugMode)
             {
                 corpseExplosionPrefab.GetComponentInChildren<Renderer>().gameObject.AddComponent<MaterialControllerComponents.HGControllerFinder>();
             }
-            if (Configs.Corpsebloom_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.Corpsebloom_Enable.Value, "Lunar", "Corpsebloom"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             ExplosionRange = Configs.Corpsebloom_ExplosionRange.Value;

@@ -5,7 +5,7 @@ A work-in-progress balancing mod that changes some of the vanilla systems of the
 <a href="https://docs.google.com/document/d/1LYXD3NK8ujFzKgfpnBfxXZfSdS0FrEV_qzumdOeqln0/edit?usp=sharing">Detailed notes on the changes can be found on the Hex3Rebalance google doc.</a>
 
 ### Items
-**7 item reworks:**
+**9 item reworks:**
 
 | Item  | Rework - Configurable values are <ins>underlined</ins>. |
 | ------------- | ------------- |
@@ -14,8 +14,9 @@ A work-in-progress balancing mod that changes some of the vanilla systems of the
 | ![stunGrenadeImg] | **Stun Grenade**<br>**<ins>5</ins>%** <sup>(+<ins>5</ins>% per stack)</sup> chance on hit to create an explosion for **<ins>25</ins>%** base damage, which **stuns enemies** in a **<ins>1.5</ins>m** radius <sup>(+<ins>0.5</ins>m per stack)</sup>. |
 |  | **UNCOMMON** |  |
 | ![daisyImg] | **Lepton Daisy**<br>Release a **healing nova** during the Teleporter event, **healing** allies for **50%** of their maximum health and **weakening** enemies for **<ins>6</ins>** seconds. Occurs **1** <sup>(+1 per stack)</sup> times. |
+| ![harpoonImg] | **Hunter's Harpoon**<br>Killing a boss enemy **permanently increases your movement speed** by **<ins>4</ins>%** up to a maximum of **<ins>40</ins>%** (+<ins>40</ins>% per stack). **Mountain shrines gain <ins>1</ins> stacks** <sup>(+<ins>1</ins> per stack)</sup> **of effectiveness**. |
 |  | **LUNAR** |  |
-| ![corpseBloomImg] | **Corpsebloom**<br>**All health regeneration is inverted**, slowly draining your HP over time <sup>(+<ins>100</ins>% drain speed per stack)</sup>. Every time you’re drained of **<ins>100</ins>%** of your max health, emit a **poisoning wave** within a **<ins>20</ins>m** <sup>(+<ins>5</ins>m per stack)</sup> radius. |
+| ![corpseBloomImg] | **Corpsebloom**<br>**All health regeneration is inverted**, slowly draining your HP over time <sup>(+<ins>50</ins>% drain speed per stack)</sup>. Every time you’re drained of **<ins>100</ins>%** of your max health, emit a **poisoning wave** within a **<ins>20</ins>m** <sup>(+<ins>5</ins>m per stack)</sup> radius. |
 | ![focusedConvergenceImg] | **Focused Convergence**<br>Teleporters and holdout zones charge **<ins>30</ins>%** <sup>(+<ins>30</ins>% per stack)</sup> faster, **but their radius shrinks over time**. Standing outside of holdout radius **diminishes charge** by **<ins>5</ins>%** per second <sup>(+<ins>2.5</ins>% per stack)</sup>. |
 | ![lightFluxImg] | **Light Flux Pauldron**<br>Gain **<ins>30</ins>%** <sup>(+<ins>30</ins>% per stack)</sup> movement speed and reduce utility skill cooldown by **<ins>50</ins>%** (-<ins>50</ins>% per stack). **Your maximum health is reduced by 50%** <sup>(-50% per stack)</sup>. |
 | ![stoneFluxImg] | **Stone Flux Pauldron**<br>Increase your **maximum health** by **<ins>100</ins>%** <sup>(+<ins>100</ins>% per stack)</sup> and **enhance regeneration** by **<ins>8</ins> hp/s** <sup>(+<ins>4</ins> per stack)</sup>. **All of your healing is reduced by <ins>50</ins>%** <sup>(-<ins>50</ins>% per stack)</sup>. |
@@ -28,6 +29,8 @@ https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/3/33/Bustling_
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/2/27/Stun_Grenade.png
 [daisyImg]:
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/7/73/Lepton_Daisy.png
+[harpoonImg]:
+https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/c/c4/Hunter%27s_Harpoon.png
 [corpseBloomImg]:
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/3/31/Corpsebloom.png
 [focusedConvergenceImg]:

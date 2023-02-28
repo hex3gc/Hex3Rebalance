@@ -4,6 +4,7 @@ using UnityEngine;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using Hex3Rebalance.Init;
+using Hex3Rebalance.Utils;
 
 namespace Hex3Rebalance.ItemChanges
 {
@@ -14,15 +15,11 @@ namespace Hex3Rebalance.ItemChanges
         private static float HealFraction;
         private static float HealFractionStack;
         private static float Interval;
-        internal static void Init(string itemName, string itemTier)
+        public static bool WindDown;
+        internal static void Init()
         {
-            if (Configs.BustlingFungus_Enable.Value)
+            if (!ItemDebugLog.PrintItemChange(Configs.BustlingFungus_Enable.Value, "Common", "Bustling Fungus"))
             {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + "");
-            }
-            else
-            {
-                Debug.Log(Main.ModName + ": (" + itemTier + ") " + itemName + " disabled, cancelling changes");
                 return;
             }
             Radius = Configs.BustlingFungus_Radius.Value;
@@ -30,6 +27,7 @@ namespace Hex3Rebalance.ItemChanges
             HealFraction = Configs.BustlingFungus_HealFraction.Value / 100f;
             HealFractionStack = Configs.BustlingFungus_HealFractionStack.Value / 100f;
             Interval = Configs.BustlingFungus_Interval.Value;
+            WindDown = Configs.BustlingFungus_WindDown.Value;
 
             AddLang();
             AddHooks();
@@ -47,14 +45,20 @@ namespace Hex3Rebalance.ItemChanges
             IL.RoR2.Items.MushroomBodyBehavior.FixedUpdate += (il) =>
             {
                 ILCursor ilcursor = new ILCursor(il);
-                ilcursor.GotoNext(
+                if (ilcursor.TryGotoNext(
                     x => x.MatchLdarg(0),
                     x => x.MatchLdfld<RoR2.Items.BaseItemBodyBehavior>("stack"),
                     x => x.MatchStloc(0),
                     x => x.MatchLdloc(0)
-                );
-                ilcursor.Index -= 3;
-                ilcursor.Emit(OpCodes.Ret);
+                ))
+                {
+                    ilcursor.Index -= 3;
+                    ilcursor.Emit(OpCodes.Ret);
+                }
+                else
+                {
+                    Debug.LogError(Main.ModName + " Bustling Fungus Items.MushroomBodyBehavior.FixedUpdate hook failed.");
+                }
             };
 
             // Create zones
@@ -75,10 +79,10 @@ namespace Hex3Rebalance.ItemChanges
                 MushroomTimer mushroomTimer = self.body.GetComponent<MushroomTimer>();
 
                 mushroomTimer.interval += Time.fixedDeltaTime;
-                if (mushroomTimer.interval >= Interval - 0.4f && self.mushroomHealingWard)
+                if (WindDown && mushroomTimer.interval >= Interval - 0.4f && self.mushroomHealingWard)
                 {
                     // Expiration animation/shrink
-                    self.mushroomHealingWard.Networkradius = self.body.radius;
+                    self.mushroomHealingWard.Networkradius = 0f;
                 }
                 if (mushroomTimer.interval >= Interval)
                 {

@@ -55,7 +55,7 @@ namespace Hex3Rebalance
             }
 
             Configs.Init();
-            Items.Init();
+            Setup.Init();
         }
     }
 }
