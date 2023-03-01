@@ -14,7 +14,7 @@ A work-in-progress balancing mod that changes some of the vanilla systems of the
 | ![stunGrenadeImg] | **Stun Grenade**<br>**<ins>5</ins>%** <sup>(+<ins>5</ins>% per stack)</sup> chance on hit to create an explosion for **<ins>25</ins>%** base damage, which **stuns enemies** in a **<ins>1.5</ins>m** radius <sup>(+<ins>0.5</ins>m per stack)</sup>. |
 |  | **UNCOMMON** |  |
 | ![daisyImg] | **Lepton Daisy**<br>Release a **healing nova** during the Teleporter event, **healing** allies for **50%** of their maximum health and **weakening** enemies for **<ins>6</ins>** seconds. Occurs **1** <sup>(+1 per stack)</sup> times. |
-| ![harpoonImg] | **Hunter's Harpoon**<br>Killing a boss enemy **permanently increases your movement speed** by **<ins>4</ins>%** up to a maximum of **<ins>40</ins>%** (+<ins>40</ins>% per stack). **Mountain shrines gain <ins>1</ins> stacks** <sup>(+<ins>1</ins> per stack)</sup> **of effectiveness**. |
+| ![harpoonImg] | **Hunter's Harpoon**<br>Killing a boss enemy **permanently increases your movement speed** by **<ins>3</ins>%** up to a maximum of **<ins>30</ins>%** (+<ins>30</ins>% per stack). **Mountain shrines gain <ins>1</ins> stacks** <sup>(+<ins>1</ins> per stack)</sup> **of effectiveness**. |
 |  | **LUNAR** |  |
 | ![corpseBloomImg] | **Corpsebloom**<br>**All health regeneration is inverted**, slowly draining your HP over time <sup>(+<ins>50</ins>% drain speed per stack)</sup>. Every time you’re drained of **<ins>100</ins>%** of your max health, emit a **poisoning wave** within a **<ins>20</ins>m** <sup>(+<ins>5</ins>m per stack)</sup> radius. |
 | ![focusedConvergenceImg] | **Focused Convergence**<br>Teleporters and holdout zones charge **<ins>30</ins>%** <sup>(+<ins>30</ins>% per stack)</sup> faster, **but their radius shrinks over time**. Standing outside of holdout radius **diminishes charge** by **<ins>5</ins>%** per second <sup>(+<ins>2.5</ins>% per stack)</sup>. |
@@ -41,6 +41,10 @@ https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/6/6e/Light_Flu
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/b/b1/Stone_Flux_Pauldron.png
 [needleTickImg]:
 https://static.wikia.nocookie.net/riskofrain2_gamepedia_en/images/7/76/Needletick.png
+
+### Gameplay
+**Interactables**
+* Void Cradles now prevent all healing for <ins>15 seconds</ins> after use.
 
 # Bugs
 
