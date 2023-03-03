@@ -1,8 +1,18 @@
 # Hex3Rebalance
 
-A work-in-progress balancing mod that changes some of the vanilla systems of the game.
+A work-in-progress balancing mod that changes some vanilla systems, and adds features in an effort to make the game's balance more satisfying.
 
 <a href="https://docs.google.com/document/d/1LYXD3NK8ujFzKgfpnBfxXZfSdS0FrEV_qzumdOeqln0/edit?usp=sharing">Detailed notes on the changes can be found on the Hex3Rebalance google doc.</a>
+
+### Interactables
+**Shrine Of Revelation**
+
+![revelationImg]
+
+Spawns in three colors: <ins>White</ins>, <ins>Green</ins> and <ins>Red</ins>. Spend a Lunar Coin to randomize all items of the corresponding tier in your inventory. Activates <ins>once</ins>.
+
+[revelationImg]:
+https://i.imgur.com/YIwWaxr.png
 
 ### Items
 **9 item reworks:**

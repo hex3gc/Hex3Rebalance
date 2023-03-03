@@ -1,4 +1,5 @@
 ﻿using BepInEx.Configuration;
+using System.Collections.Generic;
 
 namespace Hex3Rebalance.Init
 {
@@ -68,6 +69,22 @@ namespace Hex3Rebalance.Init
         public static ConfigEntry<bool> VoidCradles;
         public static ConfigEntry<float> VoidCradles_Duration;
 
+        // Interactables
+        public static ConfigEntry<bool> ShrineOfRevelationWhite_Enable;
+        public static ConfigEntry<bool> ShrineOfRevelationGreen_Enable;
+        public static ConfigEntry<bool> ShrineOfRevelationRed_Enable;
+        public static ConfigEntry<int> ShrineOfRevelationWhite_DirectorCost;
+        public static ConfigEntry<int> ShrineOfRevelationWhite_DirectorWeight;
+        public static ConfigEntry<string> ShrineOfRevelationWhite_AppearOnStages;
+        public static ConfigEntry<int> ShrineOfRevelationGreen_DirectorCost;
+        public static ConfigEntry<int> ShrineOfRevelationGreen_DirectorWeight;
+        public static ConfigEntry<string> ShrineOfRevelationGreen_AppearOnStages;
+        public static ConfigEntry<int> ShrineOfRevelationRed_DirectorCost;
+        public static ConfigEntry<int> ShrineOfRevelationRed_DirectorWeight;
+        public static ConfigEntry<string> ShrineOfRevelationRed_AppearOnStages;
+        public static ConfigEntry<int> ShrineOfRevelation_MaxUses;
+        public static ConfigEntry<int> ShrineOfRevelation_UseCostMultiplier;
+
         public static void Init()
         {
             // Common
@@ -133,6 +150,22 @@ namespace Hex3Rebalance.Init
             // Gameplay
             VoidCradles = Main.instance.Config.Bind<bool>(new ConfigDefinition("Gameplay - Void Cradles", "Enable changes"), true, new ConfigDescription("Toggle changes to this interactable."));
             VoidCradles_Duration = Main.instance.Config.Bind<float>(new ConfigDefinition("Gameplay - Void Cradles", "Debuff duration"), 15f, new ConfigDescription("How long void cradle anti-heal and regen lasts in seconds"));
+
+            // Interactables
+            ShrineOfRevelationWhite_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Enable Shrine Of Revelation (White)"), true, new ConfigDescription("Spawn this interactable in runs."));
+            ShrineOfRevelationGreen_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Enable Shrine Of Revelation (Green)"), true, new ConfigDescription("Spawn this interactable in runs."));
+            ShrineOfRevelationRed_Enable = Main.instance.Config.Bind<bool>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Enable Shrine Of Revelation (Red)"), true, new ConfigDescription("Spawn this interactable in runs."));
+            ShrineOfRevelationWhite_DirectorCost = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (White) Director Cost"), 10, new ConfigDescription("Director cost. How many interactable credits does spawning one shrine cost?"));
+            ShrineOfRevelationWhite_DirectorWeight = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (White) Director Weight"), 1, new ConfigDescription("Director weight. Lower appears less often, higher appears more."));
+            ShrineOfRevelationWhite_AppearOnStages = Main.instance.Config.Bind<string>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (White) Stages"), "1, 2, 3, 4", new ConfigDescription("Which stage pools can this shrine appear in? 1 = Titanic Plains, Roost, Forest, 2 = Wetland Aspect, Aqueduct, Sanctuary, etc..."));
+            ShrineOfRevelationGreen_DirectorCost = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Green) Director Cost"), 10, new ConfigDescription("Director cost. How many interactable credits does spawning one shrine cost?"));
+            ShrineOfRevelationGreen_DirectorWeight = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Green) Director Weight"), 1, new ConfigDescription("Director weight. Lower appears less often, higher appears more."));
+            ShrineOfRevelationGreen_AppearOnStages = Main.instance.Config.Bind<string>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Green) Stages"), "2, 3, 4, 5", new ConfigDescription("Which stage pools can this shrine appear in? 1 = Titanic Plains, Roost, Forest, 2 = Wetland Aspect, Aqueduct, Sanctuary, etc..."));
+            ShrineOfRevelationRed_DirectorCost = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Red) Director Cost"), 10, new ConfigDescription("Director cost. How many interactable credits does spawning one shrine cost?"));
+            ShrineOfRevelationRed_DirectorWeight = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Red) Director Weight"), 1, new ConfigDescription("Director weight. Lower appears less often, higher appears more."));
+            ShrineOfRevelationRed_AppearOnStages = Main.instance.Config.Bind<string>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine (Red) Stages"), "4, 5", new ConfigDescription("Which stage pools can this shrine appear in? 1 = Titanic Plains, Roost, Forest, 2 = Wetland Aspect, Aqueduct, Sanctuary, etc..."));
+            ShrineOfRevelation_MaxUses = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine Max Uses"), 1, new ConfigDescription("How much lunar coins does this shrine cost?"));
+            ShrineOfRevelation_UseCostMultiplier = Main.instance.Config.Bind<int>(new ConfigDefinition("Interactables - Shrine Of Revelation", "Shrine Extra Use Cost Multiplier"), 4, new ConfigDescription("Multiply the cost of subsequent uses by this amount"));
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Hex3Rebalance.ItemChanges;
+﻿using Hex3Rebalance.Interactables;
+using Hex3Rebalance.ItemChanges;
 using Hex3Rebalance.Modules;
 
 namespace Hex3Rebalance.Init
@@ -23,6 +24,9 @@ namespace Hex3Rebalance.Init
 
             // Gameplay
             VoidCradle.Init();
+
+            // Interactables
+            ShrineOfRevelation.Init();
         }
     }
 }

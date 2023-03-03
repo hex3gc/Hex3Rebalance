@@ -1,12 +1,12 @@
 ManifestFileVersion: 0
-CRC: 3520832294
+CRC: 4072137171
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 8f899dea044e5fed7ef867ba22506b50
+    Hash: b09257e620af559f63ab12eaad6ac0e4
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 280d6f9445cb32f4d1b7d861e4e14731
+    Hash: 081775d572f3f1eb90d78b6df6374122
 HashAppended: 0
 ClassTypes:
 - Class: 1
@@ -32,52 +32,92 @@ ClassTypes:
 - Class: 111
   Script: {instanceID: 0}
 - Class: 114
+  Script: {fileID: 11500000, guid: f8258ea15b8f74c4889ce485d21cbbb1, type: 3}
+- Class: 114
   Script: {fileID: 488236779, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
   Script: {fileID: 870831823, guid: c8c954e10545f6cd0045de066bc4846b, type: 3}
 - Class: 114
+  Script: {fileID: 11500000, guid: f6cf4007087919a40ae11e50021a02c3, type: 3}
+- Class: 114
+  Script: {fileID: 422384671, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: 1788389205, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 114
+  Script: {fileID: 268574540, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1161602148, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1620867292, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1322397448, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
   Script: {fileID: 296141222, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+- Class: 114
+  Script: {fileID: 370243918, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 136
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
 - Assets/AssetBundle/Shaders/fx/hgdamagenumber.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineIconGREENRamp.png
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionRamp.png
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationSymbol.blend
 - Assets/AssetBundle/Shaders/postprocess/hgoutlinehighlight.shader
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionMaterial.mat
 - Assets/AssetBundle/Shaders/deferred/hgstandard.shader
 - Assets/AssetBundle/H3RContentPack.asset
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineIconREDRamp.png
 - Assets/AssetBundle/Shaders/deferred/hgwavycloth.shader
 - Assets/AssetBundle/Shaders/ui/hguicustomblend.shader
 - Assets/AssetBundle/Shaders/postprocess/hgscopeshader.shader
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionTexture.png
 - Assets/AssetBundle/Shaders/fx/hgcloudremap.shader
 - Assets/AssetBundle/Shaders/deferred/hgtriplanarterrainblend.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationPrefabGreen.prefab
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationIconMaterial.mat
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionPrefab.prefab
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionTexture2.png
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationMaterial.mat
 - Assets/AssetBundle/Shaders/environment/hgwaterfall.shader
 - Assets/AssetBundle/Shaders/fx/hgintersectioncloudremap.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationPrefabRed.prefab
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionMaterial.mat
 - Assets/AssetBundle/Shaders/environment/hgdistantwater.shader
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionPrefab.prefab
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineIconWHITERamp.png
 - Assets/AssetBundle/Shaders/ui/hguioverbrighten.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationIconMaterialRed.mat
 - Assets/AssetBundle/Shaders/postprocess/hgscreendamage.shader
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionBase.png
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationMaterialRed.mat
 - Assets/AssetBundle/Shaders/fx/hgopaquecloudremap.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationMaterialGreen.mat
 - Assets/AssetBundle/Shaders/fx/hgforwardplanet.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineIconCloud.png
 - Assets/AssetBundle/Shaders/fx/hgvertexonly.shader
 - Assets/AssetBundle/Shaders/ui/hguiignorez.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationModel.blend
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineNormal.png
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseMaterialAnim2.anim
 - Assets/AssetBundle/Shaders/fx/hgdistortion.shader
 - Assets/AssetBundle/Shaders/ui/hguiblur.shader
 - Assets/AssetBundle/Shaders/environment/hggrass.shader
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationIconMaterialGreen.mat
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineTex.png
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionRamp.png
 - Assets/AssetBundle/Shaders/ui/hguibarremap.shader
 - Assets/AssetBundle/Shaders/fx/hgsolidparallax.shader
 - Assets/AssetBundle/Prefabs/StunGrenade/StunExplosionFade.anim
 - Assets/AssetBundle/Prefabs/Corpsebloom/CorpseExplosionTexture.png
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/revelationPrefab.prefab
+- Assets/AssetBundle/Prefabs/ShrineOfRevelation/shrineIcon.png
 - Assets/AssetBundle/Shaders/ui/hguianimatealpha.shader
 - Assets/AssetBundle/Shaders/postprocess/hgsobelbuffer.shader
 - Assets/AssetBundle/Shaders/deferred/hgsnowtopped.shader

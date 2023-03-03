@@ -40,6 +40,7 @@ namespace Hex3Rebalance
             instance = this;
             Assets.Init();
             if (cancel) return;
+
             var materialAssets = Assets.mainAssetBundle.LoadAllAssets<Material>();
             foreach (Material material in materialAssets)
             {
@@ -51,6 +52,15 @@ namespace Hex3Rebalance
                 if (replacementShader)
                 {
                     material.shader = replacementShader;
+
+                    if (material.GetFloat("_SrcBlend") == 0f)
+                    {
+                        material.SetFloat("_SrcBlend", 1f);
+                    }
+                    if (material.GetFloat("_DstBlend") == 0f)
+                    {
+                        material.SetFloat("_DstBlend", 1f);
+                    }
                 }
             }
 

@@ -59,6 +59,8 @@
      <Compile Include="Assets\Scripts\Config.cs" />
      <Compile Include="Assets\Scripts\Gameplay\VoidCradle.cs" />
      <Compile Include="Assets\Scripts\Hex3RebalancePlugin.cs" />
+     <Compile Include="Assets\Scripts\Interactables\ShrineOfRevelation.cs" />
+     <Compile Include="Assets\Scripts\Interactables\ShrineOfRevelationBehavior.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Common\BustlingFungus.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Common\StunGrenade.cs" />
      <Compile Include="Assets\Scripts\ItemChanges\Lunar\Corpsebloom.cs" />
